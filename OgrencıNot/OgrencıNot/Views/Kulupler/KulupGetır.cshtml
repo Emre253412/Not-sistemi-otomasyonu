@@ -1,0 +1,18 @@
+﻿@model OgrencıNot.Models.EntityFramework.KULUPLER
+@{
+    ViewBag.Title = "KulupGetır";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Guncelle", "Kulupler", FormMethod.Post)) { 
+<div class="form-group">
+    @Html.LabelFor(m=>m.KULUPADI)
+    @Html.TextBoxFor(m => m.KULUPADI, new {@class ="form-control"})
+</div>
+@Html.HiddenFor(m=>m.KULUPADI)
+    <div style="margin-top:15px">
+<button class="btn btn-info">Güncelle</button>
+    </div>
+
+
+}
+
